@@ -1,0 +1,42 @@
+<div class="todo-app" *ngIf="showContent">
+  <button (click)="show()">Go to User Login</button>
+  <h1>My to do list for Monday</h1>
+  <div *ngIf="todosList">
+    <ul>
+      <li *ngFor="let todo of todosList">
+        <span>
+          <td>{{todo.description}}</td>
+        </span>
+        <span class="delete-button">
+          <button (click)="deleteTodo(todo)">Delete</button>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <form>
+    <div>
+      <span>
+        <input name="description" id="description" [(ngModel)]="newTodo.description" placeholder="Add Task">
+      </span>
+      <span class="add-button">
+        <button type="submit" (click)="create()">Add</button>
+      </span>
+    </div>
+  </form>
+</div>
+
+  <form [formGroup]="userForm" class="userForm" *ngIf="!showContent">
+    <button (click)="show()">Go to TODO APP</button>
+    <div>
+      <label for="userName">User Name</label><br>
+      <input formControlName="userName" placeholder="Enter User Name" type="text" required>
+    </div>
+    <div>
+      <label for="password">Password</label><br>
+      <input formControlName="password" placeholder="Enter Password" type="text" required>
+    </div>
+    <div>
+      <button class="submit-button" (click)="submit()" [disabled]="!userForm.valid">Submit</button>
+    </div>
+  </form>

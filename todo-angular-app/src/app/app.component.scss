@@ -1,0 +1,61 @@
+button {
+    cursor: pointer;
+}
+input {
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+.todo-app {
+.delete-button { 
+    padding-left: 20px;
+    button {
+        background-color: red;
+        border: 1px solid red;
+        border-radius: 5px;
+        color: white;
+    }
+}
+.add-button { 
+    padding-left: 20px;
+    button {
+        background-color: green;
+        border: 1px solid green;
+        border-radius: 5px;
+        color: white;
+        width: 75px;
+    }
+}
+li {
+    padding: 3px;
+}
+}
+.userForm {
+    div {
+        padding: 10px;
+    }
+    label {
+        font-weight: bold; 
+    }
+    .submit-button {
+        background-color: blue;
+        border: 1px solid blue;
+        border-radius: 5px;
+        color: white;
+    }
+    .ng-valid,
+    .ng-valid.required {
+    border-color: green;
+    }
+    .ng-invalid {
+    border-color: red;
+    }
+    .ng-untouched { 
+        border-color: #ccc; 
+    }
+    button:disabled {
+        opacity: 0.3;
+    }
+}
+
